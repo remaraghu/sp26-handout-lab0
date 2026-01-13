@@ -16,4 +16,9 @@ def is_palindrome(s: str) -> bool:
     Returns:
         bool: True if the string is a palindrome, False otherwise.
     """
-    return True
+
+    filtered = "".join(c.lower() for c in s if c.isalnum())
+    return filtered == filtered[::-1]
+
+
+
